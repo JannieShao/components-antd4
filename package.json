@@ -1,5 +1,5 @@
 {
-  "name": "@smj/components-antd4",
+  "name": "@jannie-shao/components-antd4",
   "version": "0.0.1",
   "description": "基于 Antd 4 的组件封装",
   "author": "JannieShao <smj02@163.com>",
@@ -63,5 +63,6 @@
     "category": ""
   },
   "license": "MIT",
-  "repository": "git@github.com:JannieShao/components-antd4.git"
+  "repository": "git@github.com:JannieShao/components-antd4.git",
+  "homepage": "https://unpkg.com/@jannie-shao/components-antd4@0.0.1/build/index.html"
 }

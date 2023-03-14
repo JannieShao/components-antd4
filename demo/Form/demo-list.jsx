@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Space, Button, Divider } from 'antd';
-import { Form } from '@smj/components-antd4';
+import { Form } from '@jannie-shao/components-antd4';
 
 const App = () => {
   const [listLayout, setListLayout] = useState('inline');

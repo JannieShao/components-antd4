@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from '@smj/components-antd4';
+import { Form } from '@jannie-shao/components-antd4';
 
 const App = () => (
   <Form

@@ -1,0 +1,18 @@
+# THIS IS A STANDARD TEMPLATE FOR .npmignore FILES IN THIS REPO.
+
+# Ignore all files by default, to avoid accidentally publishing unintended files.
+*
+
+# Use negative patterns to bring back the specific things we want to publish.
+!/build/**
+!/es/**
+!/lib/**
+!CHANGELOG.json
+!CHANGELOG.md
+
+# NOTE: These don't need to be specified, because NPM includes them automatically.
+#
+# package.json
+# README (and its variants)
+# CHANGELOG (and its variants)
+# LICENSE / LICENCE

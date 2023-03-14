@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button } from 'antd';
-import { Form } from '@smj/components-antd4';
+import { Form } from '@jannie-shao/components-antd4';
 
 const App = () => {
   const compFormItemList = useRef();

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": { "@/*": ["src/*"] }
+  },
+  "exclude": ["node_modules","i18n","build"]
+}

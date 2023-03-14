@@ -11,7 +11,7 @@ order: 1
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Space } from 'antd';
-import { Styling, Button } from '@smj/components-antd4';
+import { Styling, Button } from '@jannie-shao/components-antd4';
 import '../../src/style/chunk.less';
 
 const App = () => (

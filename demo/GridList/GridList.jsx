@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridList } from '@smj/components-antd4';
+import { GridList } from '@jannie-shao/components-antd4';
 
 const App = () => (
   <GridList

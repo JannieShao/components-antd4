@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@smj/components-antd4": ["src/index.js"],
-      "@smj/components-antd4/es/*": ["src/*"],
-      "@smj/components-antd4/lib/*": ["src/*"]
+      "@jannie-shao/components-antd4": ["src/index.js"],
+      "@jannie-shao/components-antd4/es/*": ["src/*"],
+      "@jannie-shao/components-antd4/lib/*": ["src/*"]
     },
     "strictNullChecks": true,
     "module": "esnext",
