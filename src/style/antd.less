@@ -1,0 +1,64 @@
+/* stylelint-disable max-line-length */
+@import './const.less';
+
+.ant-layout.ant-layout-has-sider > .ant-layout {
+  min-width: 680px;
+}
+.ant-card {
+  margin-bottom: @normal-scape;
+  .ant-card-head {
+    min-height: auto;
+    padding: 10px @normal-scape 0 @normal-scape;
+    border-bottom: none;
+    .ant-card-head-title {
+      padding: 0;
+      * {
+        white-space: normal;
+      }
+    }
+  }
+  .ant-card-body {
+    padding: 10px @normal-scape;
+  }
+}
+.ant-card, .ant-table, .ant-pagination,
+.ant-radio-wrapper, .ant-picker,
+.ant-btn, .ant-empty, .ant-form,
+.ant-table .ant-empty-description,
+.ant-form label, .ant-form-item-label > label,
+.ant-select, .ant-select-item,
+.ant-input, .ant-input-number, .ant-input-number-group-addon,
+.ant-picker-input > input,
+.ant-form-item, .ant-form-item-explain, .ant-form-item-extra,
+.ant-tooltip, .ant-popover {
+  font-size: @normal-font;
+}
+.ant-popover-inner-content {
+  padding: @normal-scape;
+}
+.ant-select-item {
+  font-weight: @normal-weight;
+}
+.ant-radio-group {
+  vertical-align: middle;
+}
+.ant-form .ant-picker, .ant-input {
+  padding: 6px 11px;
+}
+.ant-form .ant-input-number {
+  width: 100%;
+  .ant-input-number-input {
+    height: auto;
+    padding: 6px 11px;
+  }
+}
+.ant-table .ant-table-cell {
+  padding: @normal-scape;
+}
+.ant-table .ant-table-thead .ant-table-cell {
+  background-color: @color-bg-header;
+  border-bottom: none;
+}
+.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  display: none;
+}

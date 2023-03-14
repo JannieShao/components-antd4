@@ -1,0 +1,67 @@
+{
+  "name": "@smj/components-antd4",
+  "version": "0.0.1",
+  "description": "基于 Antd 4 的组件封装",
+  "author": "JannieShao <smj02@163.com>",
+  "files": [
+    "demo/",
+    "lib/",
+    "es/",
+    "build/"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "sideEffects": [
+    "dist/*",
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.less"
+  ],
+  "scripts": {
+    "start": "build-scripts start",
+    "build": "build-scripts build",
+    "test": "build-scripts test",
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "lint": "npm run eslint && npm run stylelint"
+  },
+  "keywords": [
+    "react",
+    "antd4",
+    "component"
+  ],
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@iceworks/spec": "^1.0.0",
+    "antd": "^4.24.8",
+    "babel-eslint": "^10.1.0",
+    "build-plugin-antd": "^0.1.4",
+    "build-plugin-component": "^1.0.0",
+    "build-scripts": "^1.1.1",
+    "eslint": "^7.32.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "stylelint": "^13.7.2"
+  },
+  "peerDependencies": {
+    "@ant-design/icons": ">=4.7.0",
+    "antd": "^4.24.8",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "componentConfig": {
+    "name": "components-antd4",
+    "title": "",
+    "category": ""
+  },
+  "license": "MIT",
+  "repository": "git@github.com:JannieShao/components-antd4.git"
+}

@@ -1,0 +1,39 @@
+@import '../../style/const.less';
+
+.@{root-prefix}-styling {
+  display: inline-block;
+}
+.@{root-prefix}-text-success {
+  color: @color-success;
+}
+.@{root-prefix}-text-warning {
+  color: @color-warning;
+}
+.@{root-prefix}-text-danger {
+  color: @color-danger;
+}
+.@{root-prefix}-text-primary {
+  color: @color-primary;
+}
+.@{root-prefix}-ele-inline {
+  white-space: nowrap;
+}
+.@{root-prefix}-ele-to-input-style {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid @color-border-normal;
+  padding: 0 11px;
+  cursor: text;
+  &:not([disabled]):hover {
+    border-color: @color-light-primary;
+  }
+  &[disabled] {
+    color: @color-disabled;
+    background-color: @color-bg-disabled;
+  }
+}
+

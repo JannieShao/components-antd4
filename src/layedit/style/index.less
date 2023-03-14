@@ -1,0 +1,75 @@
+@import '../../style/const.less';
+
+@layedit-prefix: ~'@{root-prefix}-layedit';
+
+.@{layedit-prefix} {
+  width: 100%;
+  background: #fff;
+  border: 1px solid @color-border-normal;
+  &:focus {
+    border-color: @color-light-primary;
+    border-right-width: 1px !important;
+    outline: 0;
+  }
+  &.@{layedit-prefix}-disabled {
+    color: #00000040;
+    background: @color-bg-disabled;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  &-bar {
+    width: 100%;
+    padding: 0 11px;
+    .ant-space-item:not(:first-child) {
+      padding-left: 8px;
+      border-left: 1px solid @color-scape;
+    }
+    &-item, button {
+      height: 32px;
+      line-height: 32px;
+      font-weight: bold;
+      color: @color-dark-operation;
+      cursor: pointer;
+      &:hover {
+        color: @color-light-operation;
+      }
+    }
+    &-item {
+      position: relative;
+      .ant-popover-placement-bottom {
+        min-width: 100%;
+        top: 24px !important;
+        .ant-popover-inner-content {
+          padding: 5px 0;
+        }
+        .@{layedit-prefix}-placeholder-item {
+          padding: 5px 12px;
+          cursor: pointer;
+          white-space: nowrap;
+        }
+      }
+      button {
+        padding: 0;
+      }
+    }
+  }
+  &-value {
+    position: relative;
+    iframe {
+      display: inline-block;
+      width: 100%;
+      margin: 0;
+      border: none;
+      border-top: 1px solid @color-border-normal;
+      border-radius: 0;
+    }
+  }
+  &-show-count {
+    padding: 0 11px 6px 11px;
+    text-align: right;
+    color: #00000040;
+    &-warning {
+      color: @color-light-danger;
+    }
+  }
+}

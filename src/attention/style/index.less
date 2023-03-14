@@ -1,0 +1,23 @@
+@import '../../style/const.less';
+
+.@{root-prefix}-attention-content {
+  padding: @normal-scape;
+  font-size: @normal-font;
+  font-weight: @normal-weight;
+  background-color: @color-bg-warning;
+  border: 1px solid @color-border-warning;
+  p {
+    margin: 0;
+    line-height: 18px;
+  }
+  p:first-child {
+    margin-bottom: 8px;
+    span {
+      margin-right: 8px;
+      color: @color-warning;
+    }
+  }
+  p:not(:first-child) {
+    margin-left: 20px;
+  }
+}

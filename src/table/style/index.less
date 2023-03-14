@@ -1,0 +1,20 @@
+@import '../../style/const.less';
+
+.@{root-prefix}-table-use-tab-more {
+  tbody {
+    vertical-align: top;
+    .@{root-prefix}-tab-more {
+      margin-bottom: -@normal-scape;
+      .ant-tag {
+        margin-bottom: @normal-scape;
+      }
+    }
+  }
+}
+
+.@{root-prefix}-table-in-expand .ant-table .ant-table-content {
+  border: 1px solid @color-border-content;
+  .ant-table-thead .ant-table-cell {
+    background-color: @color-bg-light-header;
+  }
+}

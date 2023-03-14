@@ -1,0 +1,21 @@
+@import '../../style/const.less';
+
+@grid-list-prefix: ~'@{root-prefix}-grid-list';
+
+.@{grid-list-prefix} {
+  border-top: 1px solid @color-table-border;
+  border-left: 1px solid @color-table-border;
+  .ant-row {
+    min-height: 100%;
+    .ant-col {
+      padding: 12px;
+      border-right: 1px solid @color-table-border;
+      border-bottom: 1px solid @color-table-border;
+    }
+    .@{grid-list-prefix}-label {
+      font-weight: 500;
+      text-align: right;
+      background-color: @color-table-bg;
+    }
+  }
+}
