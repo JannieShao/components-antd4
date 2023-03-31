@@ -32,10 +32,35 @@ const App = () => {
             name: 'list',
             type: 'list',
             formProps: { label: 'List' },
-            props: { layout: listLayout },
-            items: [
-              { name: 'listItem1', type: 'input', props: { placeholder: 'List Field 1' } },
-              { name: 'listItem2', type: 'input', props: { placeholder: 'List Field 2' } },
+            props: { layout: listLayout, max: 5 },
+            items: ({ sn, record, idx }) => [
+              {
+                name: 'listItem1',
+                type: 'select',
+                props: {
+                  placeholder: 'List Field 1',
+                  options: [
+                    { label: 'f1-1', value: 1 },
+                    { label: 'f1-2', value: 2 },
+                  ],
+                  onChange: ({ updateFields }, valNow) => {
+                    updateFields({
+                      listItem1: valNow,
+                      listItem2: `Set by Field 1 with ${valNow}`,
+                    });
+                  },
+                },
+              },
+              {
+                name: 'listItem2',
+                type: 'input',
+                props: { placeholder: 'List Field 2' },
+              },
+              {
+                name: 'listItem3',
+                type: 'input',
+                props: { placeholder: `SN: ${sn}; ListItem1: ${record.listItem1 || ''}; Line: ${idx + 1}` },
+              },
             ]
           },
         ]}

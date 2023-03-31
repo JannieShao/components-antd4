@@ -16,15 +16,15 @@ const App = () => {
     compFormTable.current.setFieldsValue({
       table: [
         {
-          sn: 1, left: 1, opt: 1, right: 2,
+          no: 1, left: 1, opt: 1, right: 2,
         },
-        { sn: 3, left: 2, opt: 2 },
+        { no: 3, left: 2, opt: 2 },
       ],
     });
   }, []);
   return (
     <>
-      <Button onClick={handleAddTableItem}> + </Button>
+      <Button onClick={handleAddTableItem}> Add </Button>
       <Form
         ref={compFormTable}
         layout="vertical"
@@ -32,11 +32,27 @@ const App = () => {
           {
             name: 'table',
             type: 'table',
-            max: 3,
-            startIdx: 1,
-            showSN: true,
-            useKeyAsSN: true,
             formProps: { ref: compFormItemTable },
+            props: {
+              max: 5,
+              startIdx: 1,
+              showSN: true,
+              useKeyAsSN: true,
+              useOperation: true,
+              snConfig: {
+                snKey: 'no',
+                snLabel: 'No',
+              },
+              checkOpt: ({ type, optConfig }) => {
+                const {
+                  record, idx, maxKey, isLast, isOnly,
+                } = optConfig;
+                if (record.no === maxKey - 1) return false;
+                if (type === 'remove' && idx === 0) return false;
+                if (type === 'add' && (isLast || isOnly)) return true;
+                return true;
+              },
+            },
             items: [
               {
                 name: 'left',
@@ -63,7 +79,14 @@ const App = () => {
                   />
                 ),
               },
-              { name: 'right', type: 'input', label: 'Right' },
+              {
+                name: 'right',
+                type: 'input',
+                label: 'Right',
+                props: ({ sn, record, idx }) => ({
+                  placeholder: `No: ${sn}; Left: ${record.left || ''}; Line: ${idx + 1}`,
+                }),
+              },
             ]
           },
         ]}

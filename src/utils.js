@@ -86,3 +86,13 @@ export const timestamp = (time, format = '') => {
   if (format === 'endOfDaySecond') return parseInt(moment(time).endOf('day').valueOf() / 1000, 10) * 1000;
   return moment(time).valueOf();
 };
+
+export const randomString = (len = 32) => {
+  const chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+  const maxPos = chars.length;
+  let pwd = '';
+  for (let i = 0; i < len; i++) {
+    pwd += chars.charAt(Math.floor(Math.random() * maxPos));
+  }
+  return pwd;
+};

@@ -7,6 +7,8 @@ import Item from './Item';
 const RenderList = forwardRef(({ model, itemRender, ...props }, ref) => {
   const { value } = props;
   const compListItem = useRef();
+  // 用于透出 add 方法时，实现条数限制
+  const eleCount = useRef(1);
 
   const [data, setData] = useState([{}]);
 
@@ -17,6 +19,7 @@ const RenderList = forwardRef(({ model, itemRender, ...props }, ref) => {
       return;
     }
     setData(value);
+    eleCount.current = value.length;
   }, [value]);
 
   useImperativeHandle(ref, () => ({
@@ -27,10 +30,12 @@ const RenderList = forwardRef(({ model, itemRender, ...props }, ref) => {
       {(fields, operation) => (
         <Item
           ref={compListItem}
+          eleCount={eleCount}
           fields={fields}
           operation={operation}
           model={model}
           data={data}
+          onChange={props?.onChange}
           itemRender={itemRender}
         />
       )}

@@ -1,6 +1,6 @@
 ---
 title: fieldType
-order: 22
+order: 44
 # docGenIncludes:
 ---
 
@@ -22,8 +22,9 @@ order: 22
 | timeRange | \<TimePicker.RangePicker /\> |
 | radio | \<Radio.Group /\> |
 | autoComplate | [自动补齐](#container_AutoComplete) |
+| card | 使用卡片管理一组 item |
 | group | 一组 item |
 | dependent | 有依赖关系的一组 item |
-| list | 数组化管理的字段 |
+| list | 数组化管理的字段, items 不支持使用 group |
 | table | 表格内数组化管理的字段, items 不支持使用 group、dependent、list |
 

@@ -1,6 +1,6 @@
 {
   "name": "@jannie-shao/components-antd4",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "基于 Antd 4 的组件封装",
   "author": "JannieShao <smj02@163.com>",
   "files": [

@@ -7,11 +7,16 @@ import Item from './Item';
 
 const FormItemTable = forwardRef(({ model, ...props }, ref) => {
   const { value } = props;
+  const {
+    startIdx = 0, showSN = true, useKeyAsSN = false, snConfig = {},
+  } = model.props || {};
+  const { snKey = 'sn' } = snConfig;
+
   const compItem = useRef();
-  const defaultKey = useMemo(() => (model.startIdx || 0), [model.startIdx]);
+  const defaultKey = useMemo(() => (startIdx || 0), [startIdx]);
   const defaultData = useMemo(() => (
-    (model.showSN && model.useKeyAsSN) ? [{ sn: defaultKey }] : [{}]
-  ), [model.showSN, model.useKeyAsSN, defaultKey]);
+    (showSN && useKeyAsSN) ? [{ [snKey]: defaultKey }] : [{}]
+  ), [showSN, useKeyAsSN, defaultKey]);
 
   const [maxKey, setMaxKey] = useState(defaultKey);
   const [data, setData] = useState(defaultData);
@@ -24,8 +29,8 @@ const FormItemTable = forwardRef(({ model, ...props }, ref) => {
       props?.onChange && props.onChange(defaultData);
       return;
     }
-    const unFillValLen = val.filter(v => v?.sn === undefined).length;
-    const fillValSN = val.filter(v => v?.sn !== undefined).map(v => v.sn);
+    const unFillValLen = val.filter(v => v?.[snKey] === undefined).length;
+    const fillValSN = val.filter(v => v?.[snKey] !== undefined).map(v => v[snKey]);
     let maxSN = maxKey.current;
     if (unFillValLen === 0 && fillValSN.length === 0) {
       maxSN = defaultKey;

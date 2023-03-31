@@ -1,6 +1,6 @@
 ---
 title: opType
-order: 24
+order: 42
 # docGenIncludes:
 ---
 

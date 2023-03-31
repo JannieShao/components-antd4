@@ -1,0 +1,23 @@
+@import '../../style/const.less';
+
+@drawer-prefix: ~'@{root-prefix}-drawer';
+
+.@{root-prefix}-auto-container .@{drawer-prefix} {
+  position: absolute;
+}
+.@{drawer-prefix} .ant-drawer-content-wrapper {
+  .ant-drawer-header,
+  .ant-drawer-body {
+    background-color: @color-bg-normal;
+  }
+  .ant-drawer-header {
+    padding: 18px 12px;
+    border-bottom: 0;
+    .@{drawer-prefix}-top-bar a {
+      padding-right: 13px;
+    }
+  }
+  .ant-drawer-body {
+    padding: 0;
+  }
+}

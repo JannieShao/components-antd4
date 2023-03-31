@@ -1,0 +1,36 @@
+@import '../../style/const.less';
+
+@inline-list-prefix: ~'@{root-prefix}-inline-list';
+.ant-card.@{inline-list-prefix} {
+  background-color: #d1deff;
+  border-color: #d1deff;
+  .ant-card-body {
+    .@{inline-list-prefix}-item-key {
+      padding-right: 5px;
+      font-weight: 500;
+      word-break: keep-all;
+      white-space: nowrap;
+    }
+    .@{inline-list-prefix}-item-value {
+      color: #8a8a8a;
+      white-space: break-spaces;
+      word-break: break-word;
+    }
+    .@{inline-list-prefix}-info .@{inline-list-prefix}-item {
+      display: inline-block;
+      padding: 10px;
+      .@{inline-list-prefix}-item-key, .@{inline-list-prefix}-item-value {
+        display: inline-block;
+      }
+    }
+    .@{inline-list-prefix}-more .@{inline-list-prefix}-item {
+      display: flex;
+      .@{inline-list-prefix}-item-key {
+        padding: 10px;
+      }
+      .@{inline-list-prefix}-item-value {
+        padding: 10px 0;
+      }
+    }
+  }
+}

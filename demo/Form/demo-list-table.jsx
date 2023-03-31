@@ -21,6 +21,7 @@ const App = () => {
             name: 'list',
             type: 'list',
             formProps: { ref: compFormItemList },
+            props: { max: 3 },
             items: [
               {
                 name: 'table',

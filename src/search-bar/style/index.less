@@ -1,0 +1,36 @@
+@import '../../style/const.less';
+
+@search-bar-prefix: ~'@{root-prefix}-search-bar';
+
+.@{search-bar-prefix} {
+  .ant-card-body {
+    padding: 10px 12px;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    .@{search-bar-prefix}-form {
+      width: 100%;
+    }
+    .ant-form-item {
+      padding: 16px 0;
+      margin-bottom: 0;
+    }
+    .@{search-bar-prefix}-form:not(.lzdcro-comp-form-grid) {
+      .ant-form-item {
+        margin-right: 16px;
+      }
+    }
+  }
+  &.@{search-bar-prefix}-flex
+  .@{search-bar-prefix}-content
+  .@{search-bar-prefix}-form {
+    > * {
+      flex: 1 1 auto;
+    }
+    > :last-child,
+    > .@{search-bar-prefix}-fix {
+      flex: 0 0 auto;
+    }
+  }
+}

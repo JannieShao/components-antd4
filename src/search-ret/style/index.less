@@ -1,0 +1,58 @@
+@import '../../style/const.less';
+
+.@{root-prefix}-search-ret {
+  .ant-table-cell a {
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+  .operation-group {
+    display: flex;
+    & > *:not(:last-child) {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 12px;
+        top: 50%;
+        right: 0;
+        margin-top: -6px;
+        margin-left: 8px;
+        background-color: @color-border-normal;
+      }
+    }
+  }
+  &-state {
+    position: relative;
+    padding-left: 16px;
+    white-space: nowrap;
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      margin-top: -5px;
+      content: "";
+      border-radius: 5px;
+    }
+  }
+  &-state-wait-active:before {
+    background: @color-status-wait;
+  }
+  &-state-active:before {
+    background: @color-status-success;
+  }
+  &-state-inactive:before {
+    background: @color-status-cancel;
+  }
+  &-state-active-in-approval:before {
+    background: @color-status-process;
+  }
+  &-state-deactive-in-approval:before {
+    background: @color-status-process;
+  }
+  .ant-table-content {
+    overflow: auto hidden;
+  }
+}
